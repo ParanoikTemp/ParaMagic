@@ -1,0 +1,24 @@
+name: ParaMagic
+version: '1.0-SNAPSHOT'
+main: me.parax.paramagic.ParaMagic
+api-version: '1.20'
+prefix: ParaMagic
+load: STARTUP
+authors: [Parax]
+description: Плагин добавит магию на ваш сервер
+
+commands:
+  mana:
+    description: Пишет количество маны у игрока
+    aliases:
+      - mn
+    usage: /mana <player>
+  getstaff:
+    description: Дает посох игроку
+    aliases:
+      - gs
+    usage: /getstaff <staff>
+  test:
+    description: test command
+    usage: /test
+

@@ -1,0 +1,12 @@
+me\parax\paramagic\altars\staffOfLightCraft.class
+me\parax\paramagic\ParaMagic.class
+me\parax\paramagic\staffs\staffOfLight.class
+me\parax\paramagic\spells\dolphinPowerSpell.class
+me\parax\paramagic\commands\testCMD.class
+me\parax\paramagic\utils.class
+me\parax\paramagic\magic\smelting.class
+me\parax\paramagic\commands\getStaff.class
+me\parax\paramagic\commands\manaCMD.class
+me\parax\paramagic\altars\checkNetherAltar.class
+me\parax\paramagic\spells\HarvestDaySpell.class
+me\parax\paramagic\commands\getStaffCompleter.class
