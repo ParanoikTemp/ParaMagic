@@ -1,6 +1,7 @@
 package me.parax.paramagic;
 
 import me.parax.paramagic.altars.staffOfLightCraft;
+import me.parax.paramagic.altars.staffOfSilenceCraft;
 import me.parax.paramagic.commands.getStaff;
 import me.parax.paramagic.commands.getStaffCompleter;
 import me.parax.paramagic.commands.manaCMD;
@@ -24,6 +25,9 @@ public final class ParaMagic extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new staffOfLight(), this);  // Посох света
         getServer().getPluginManager().registerEvents(new staffOfLightCraft(this), this);
+
+        // getServer().getPluginManager().registerEvents(new staffOfLight(), this);  // Посох света
+        getServer().getPluginManager().registerEvents(new staffOfSilenceCraft(this), this);
 
         getCommand("mana").setExecutor(new manaCMD());  // Команда информации о том, сколько у тебя маны
         getCommand("getstaff").setExecutor(new getStaff());  // Команда выдачи посоха

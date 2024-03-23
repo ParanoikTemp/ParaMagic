@@ -4,14 +4,10 @@ import org.bukkit.*;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 public class utils {
-    public static @NotNull String ct(String text) {
-        return ChatColor.translateAlternateColorCodes('&', text);
-    }
 
     public static void PlaySound(Location location, Sound sound, int radius) {
         for (Player player: location.getNearbyPlayers(radius)) {
