@@ -13,7 +13,9 @@ public class getStaffCompleter implements TabCompleter {
     public @Nullable List<String> onTabComplete(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         if (strings.length == 1) {
             return List.of(
-                    "staffOfLight"
+                    "staffOfLight",
+                    "shaftOfSilence",
+                    "staffOfSilence"
             );
         } else return List.of();
     }
