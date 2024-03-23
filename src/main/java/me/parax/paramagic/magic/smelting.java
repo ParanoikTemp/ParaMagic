@@ -19,6 +19,11 @@ import java.util.function.Predicate;
 
 public class smelting implements Listener {
 
+    private final List<Material> item1 = List.of(Material.RAW_IRON, Material.RAW_COPPER, Material.RAW_GOLD, Material.SAND, Material.IRON_ORE,
+            Material.GOLD_ORE, Material.DIAMOND_ORE, Material.REDSTONE_ORE, Material.COAL_ORE, Material.COPPER_ORE);
+    private final List<Material> item2 = List.of(Material.IRON_INGOT, Material.COPPER_INGOT, Material.GOLD_INGOT, Material.GLASS, Material.IRON_INGOT,
+            Material.GOLD_INGOT, Material.DIAMOND, Material.REDSTONE, Material.COAL, Material.COPPER_INGOT);
+
     private void func(Player player, Item item, PlayerInteractEvent event) {
         event.setCancelled(true);
         ItemStack it = item.getItemStack().subtract();;
@@ -41,20 +46,12 @@ public class smelting implements Listener {
                 for (Entity entity : entities) {
                     Item item = (Item) entity;
                     Location loc = item.getLocation();
-                    if (item.getItemStack().getType() == Material.RAW_IRON) {
-                        world.dropItem(loc, new ItemStack(Material.IRON_INGOT));
-                        func(player, item, event);
-                        break;
-                    }
-                    if (item.getItemStack().getType() == Material.RAW_COPPER) {
-                        world.dropItem(loc, new ItemStack(Material.COPPER_INGOT));
-                        func(player, item, event);
-                        break;
-                    }
-                    if (item.getItemStack().getType() == Material.RAW_GOLD) {
-                        world.dropItem(loc, new ItemStack(Material.GOLD_INGOT));
-                        func(player, item, event);
-                        break;
+                    for (int i = 0; i < item1.size(); ++i) {
+                        if (item.getItemStack().getType() == item1.get(i)) {
+                            world.dropItem(loc, new ItemStack(item2.get(i)));
+                            func(player, item, event);
+                            break;
+                        }
                     }
                 }
             }
